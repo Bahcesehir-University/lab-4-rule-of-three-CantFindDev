@@ -126,8 +126,10 @@ public:
         
         g_assignmentCount++;
         if (this == &other){
-            delete[] m_data;
+             return *this;
         }
+        
+        delete[] m_data;
         
         m_length = other.m_length;
         
